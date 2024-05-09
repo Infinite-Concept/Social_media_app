@@ -1,0 +1,134 @@
+.login{
+    width: 100%;
+    min-height: 100vh;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .login_container{
+        max-width: 400px;
+        width: 100%;
+        padding: 50px 10px;
+
+        h1.text{
+            font-family: "Pacifico", cursive;
+        }
+
+        h3.text{
+            font-weight: 700;
+        }
+        
+        .signin-form{
+            display: flex;
+            flex-direction: column;
+            row-gap: 20px;
+
+            .form_input{
+                width: 100%;
+
+                input{
+                    padding: 13px 15px;
+                    border-radius: 3px;
+                    border: 1px solid #acacac;
+                    width: 100%;
+
+                    :focus, :active, :valid{
+                        border: none;
+                        outline: none;
+                    }
+                    
+                }
+
+                [type="submit"]{
+                    background-color: #10a37f;
+                    border: none;
+                    padding: 10px 0;
+                    font-weight: 500;
+                    width: 100%;
+                    color: #fff;
+                }
+
+                .toggle-password{
+                    display: none;
+                }
+                
+            }
+
+            .form_input_ch{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                input{
+                    margin-right: 10px;
+                }
+
+                a{
+                    text-decoration: none;
+                    color: #10a37f;
+                }
+
+            }
+        }
+
+        .forget{
+            margin-top: 20px;
+
+
+
+            span{
+                font-size: 14px;
+                display: flex;
+                justify-content: center;
+                margin-bottom: 10px;
+
+                a{
+                    text-decoration: none;
+                    color: #10a37f;
+                    font-weight: 600;
+                }
+            }
+        }
+
+        .underline{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+
+            span{
+                border: 1px solid #dddddd8e;
+                display: block;
+                width: 100%;
+            }
+        }
+
+        .social_link{
+            display: flex;
+            flex-direction: column;
+            row-gap: 20px;
+
+            .inner_social{
+                display: flex;
+                align-items: center;
+                border: 1px solid #c2c8d0;
+                height: 52px;
+                color: #2d333a;
+                cursor: pointer;
+                padding: 0 8px 0 20px;
+                gap: 15px;
+                border-radius: 7px;
+
+                p{
+                    font-size: 16px;
+                    margin-bottom: 0;
+                    font-weight: 400;
+                    color: #2d333a;
+                }
+            }
+        }
+    }
+
+}
