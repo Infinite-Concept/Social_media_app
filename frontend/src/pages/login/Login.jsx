@@ -24,7 +24,7 @@ function Login() {
                     </label>       
 
                     <div className="">
-                        <NavLink> forget password</NavLink>  
+                        <NavLink to="/forget"> forget password</NavLink>  
                     </div>                        
                 </div>
 
