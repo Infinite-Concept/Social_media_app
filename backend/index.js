@@ -2,6 +2,8 @@ const express = require("express")
 const mongoose = require("mongoose")
 const bodyParser = require("body-parser")
 const cors = require("cors")
+const authenticate = require("./routes/authentication")
+const pages = require("./routes/pagesRoute")
 
 
 const app = express()
@@ -21,5 +23,8 @@ mongoose.connect("mongodb://localhost/social")
 app.use(bodyParser.urlencoded({extended: false}))
 app.use(express.json())
 app.use(cors())
+app.use("/user", authenticate)
+app.use("/home", pages)
+
 
 

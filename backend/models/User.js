@@ -23,6 +23,17 @@ const UserScheme = new mongoose.Schema({
     profilePicture: {
         type: String
     },
+    bio: {
+        type: String,
+        min: 20,
+        max: 40
+    },
+    gender: {
+        type: String
+    },
+    website: {
+        type: String
+    },
     joindDate: { 
         type: Date, 
         default: Date.now
