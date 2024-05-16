@@ -3,13 +3,13 @@ const bcrypt = require('bcrypt');
 const User = require('../models/User');
 
 async function initialize(passport) {
-  const authenticateUser = async (email, password, done) => {
+  const authenticateUser = async (username, password, done) => {
     try {
       // Find user by email
-      const user = await User.findOne({ email });
+      const user = await User.findOne({ username });
 
       if (!user) {
-        return done(null, false, { message: 'No user with that email' });
+        return done(null, false, { message: 'No user with that username' });
       }
 
       // Compare password

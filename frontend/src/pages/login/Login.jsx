@@ -1,20 +1,46 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "./login.scss"
 import { NavLink } from 'react-router-dom'
 import google from "../../assets/icons/google.svg"
+import facebook from "../../assets/icons/facebook.svg"
+import axios from 'axios'
 
 function Login() {
+    const[login, setLogin] = useState({})
+    const[error, setError] = useState({})
+
+    const handleSubmit = (e) => {
+        const {name, value} = e.target
+
+        setLogin({...login, [name]: value})
+    }
+
+    const formSubmit = async(e) => {
+        e.preventDefault()
+
+        let Error = {}
+
+        try {
+
+            const data = axios.post("", )
+            
+        } catch (error) {
+            console.log(error);
+        }
+
+    }
+
   return (
-    <div className='login'>
+    <div className='login' onSubmit={formSubmit}>
         <div className="login_container">
             <h1 className='mb-5 text-center text'>Threads app</h1>
             <h3 className="mb-5 text-center text">Welcome back?</h3>
             <form action="#" className="signin-form">
                 <div className="form_input">
-                    <input type="text" placeholder="Username" required />
+                    <input type="text" placeholder="Username" required name='username' value={login.username} onChange={handleSubmit} />
                 </div>
                 <div className="form_input">
-                    <input id="password-field" type="password" placeholder="Password" required />
+                    <input id="password-field" type="password" placeholder="Password" required name='password' value={login.password} onChange={handleSubmit} />
                     <span toggle="#password-field" className="fa fa-fw fa-eye field-icon toggle-password"></span>
                 </div>
                 <div className="form_input_ch">
@@ -50,7 +76,7 @@ function Login() {
                 </div>
 
                 <div className='inner_social'>
-                    <img src={google} alt="" />
+                    <img src={facebook} alt="" />
                     <p>Continue with Google</p>
                 </div>
             </div>

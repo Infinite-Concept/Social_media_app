@@ -22,11 +22,7 @@ const registrationSchema = Joi.object({
     website: Joi.string()
 })
 
-initializePassport(
-    passport,
-    email => User.find(user => user.username === username),
-    id => User.find(user => user.id === id)
-)
+initializePassport(passport)
 
 
 // register 

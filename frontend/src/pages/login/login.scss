@@ -53,6 +53,14 @@
                 .toggle-password{
                     display: none;
                 }
+
+                p{
+                    color: rgba(255, 0, 0, 0.877);
+                    margin-top: 5px;
+                    margin-bottom: 0;
+                    font-size: 14px;
+                    font-style: italic;
+                }
                 
             }
 
@@ -120,6 +128,10 @@
                 padding: 0 8px 0 20px;
                 gap: 15px;
                 border-radius: 7px;
+
+                img{
+                    width: 28px;
+                }
 
                 p{
                     font-size: 16px;
